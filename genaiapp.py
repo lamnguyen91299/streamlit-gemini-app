@@ -6,7 +6,19 @@ import streamlit as st
 from PIL import Image
 import io
 
-genai.configure(api_key='hello ?')
+
+# Check if the app is running in Streamlit Cloud
+if "gemini_api_key" in st.secrets:
+    # Use Streamlit Secrets if running in Streamlit Cloud
+    gemini_api_key = st.secrets["gemini_api_key"]
+else:
+    # Load environment variables if running locally
+    from dotenv import load_dotenv
+    import os
+    load_dotenv()
+    gemini_api_key = os.getenv("gemini_api_key")
+
+genai.configure(api_key=gemini_api_key)
 
 # define a convert upload file to variable
 @st.cache_data
