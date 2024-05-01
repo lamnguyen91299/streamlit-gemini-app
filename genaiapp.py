@@ -6,7 +6,7 @@ import streamlit as st
 from PIL import Image
 import io
 
-genai.configure(api_key='')
+genai.configure(api_key='hello ?')
 
 # define a convert upload file to variable
 @st.cache_data
