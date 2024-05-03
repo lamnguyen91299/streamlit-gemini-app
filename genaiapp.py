@@ -205,7 +205,8 @@ In addition, if the painting is not a famous painting, please state the basic in
             st.image(uml_img)
         else:
             st.warning("Please upload your UML !")
-        prompt = """Document the entities and relationships in this ER diagram"""
+        # prompt = """Document the entities and relationships in this ER diagram"""
+        prompt = """Give me all schema, structure, relationship of this UML"""
         tab1, tab2 = st.tabs(["Response", "Prompt"])
         er_diag_img_description = st.button("Generate!", key="er_diag_img_description")
         #Response tab
