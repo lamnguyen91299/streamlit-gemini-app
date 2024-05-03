@@ -48,7 +48,7 @@ if picture:
     st.write("Take picture succesfull !")
 
 img = handle_uploaded_image(picture)
-prompt = f"""Based on the concept of the "We're Not Really Strangers" deck and the content of the photo that input . Please give me 1 main questions along with an additional question from level {wnrs_level}.
+prompt = f"""Based on the concept of the "We're Not Really Strangers" deck and the content of the photo that input . Please give me 1 main questions from level {wnrs_level} along with an additional sub question .
 With these inputs, make sure to follow following guidelines and generate with proper headlines: 
   + main question :
     + sub question : 
